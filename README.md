@@ -276,5 +276,5 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-
+Alexander Morogov
 
