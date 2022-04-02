@@ -9,10 +9,12 @@
 
 package swagger
 
+import "encoding/json"
+
 type V1alpha1RevisionHistory struct {
-	DeployStartedAt *V1Time `json:"deployStartedAt,omitempty"`
-	DeployedAt *V1Time `json:"deployedAt,omitempty"`
-	Id string `json:"id,omitempty"`
-	Revision string `json:"revision,omitempty"`
-	Source *V1alpha1ApplicationSource `json:"source,omitempty"`
+	DeployStartedAt *V1Time                    `json:"deployStartedAt,omitempty"`
+	DeployedAt      *V1Time                    `json:"deployedAt,omitempty"`
+	Id              json.Number                `json:"id,omitempty"`
+	Revision        string                     `json:"revision,omitempty"`
+	Source          *V1alpha1ApplicationSource `json:"source,omitempty"`
 }
