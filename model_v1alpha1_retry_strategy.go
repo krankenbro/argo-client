@@ -9,8 +9,10 @@
 
 package swagger
 
+import "encoding/json"
+
 type V1alpha1RetryStrategy struct {
 	Backoff *V1alpha1Backoff `json:"backoff,omitempty"`
 	// Limit is the maximum number of attempts for retrying a failed sync. If set to 0, no retries will be performed.
-	Limit *string `json:"limit,omitempty"`
+	Limit json.Number `json:"limit,omitempty"`
 }
